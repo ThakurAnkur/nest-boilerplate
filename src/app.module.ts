@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import configuration from './config/configuration';
+import { User } from './user/entities/user.entity';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -17,10 +18,12 @@ import configuration from './config/configuration';
       host: process.env.DATABASE_HOST,
       port: Number(process.env.DATABASE_PORT),
       username: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PASSWORD,
-      database: 'test',
+      database: 'boilerplate',
+      entities: [User],
       autoLoadEntities: true,
       synchronize: true,
+      debug: true,
+      logging: 'all',
     }),
     UserModule,
   ],

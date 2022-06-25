@@ -1,1 +1,8 @@
-export class CreateUserDto {}
+export class CreateUserDto {
+  email: string;
+  password: string;
+  constructor(email, password) {
+    this.email = email;
+    this.password = password;
+  }
+}
