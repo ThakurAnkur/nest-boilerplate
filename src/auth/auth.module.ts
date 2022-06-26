@@ -9,8 +9,6 @@ import { JwtAuthGuard } from './jwt-auth.guard';
 import { JwtStrategy } from './jwt.strategy';
 import { LocalStrategy } from './local.strategy';
 
-console.log(process.env, process.env.DATABASE_HOST, process.env.JWT_SECRET);
-
 @Module({
   imports: [
     UserModule,

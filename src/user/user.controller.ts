@@ -1,21 +1,17 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Post, Body, Param, Delete } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
+import { Public } from '../auth/constant';
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
-
+  @Public()
   @Post()
   async create(@Body() createUserDto: CreateUserDto) {
     let result = null;
     result = await this.userService.create(createUserDto);
     return result;
-  }
-
-  @Get(':email')
-  findOne(@Param('email') email: string) {
-    return this.userService.findOne(email);
   }
 
   @Delete(':email')
