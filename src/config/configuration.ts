@@ -4,6 +4,7 @@ export default () => ({
   isProduction: process.env.IS_PRODUCTION,
   isTest: process.env.IS_TEST,
   isReview: process.env.IS_REVIEW,
+  jwtSecret: process.env.JWT_SECRET,
   database: {
     host: process.env.DATABASE_HOST,
     port: parseInt(process.env.DATABASE_PORT, 10) || 3306,
