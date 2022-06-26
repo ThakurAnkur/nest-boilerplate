@@ -1,13 +1,6 @@
-# Database related
-
-Installing typeorm mysql2
-yarn add @nestjs/typeorm typeorm mysql2
-
-`create database boilerplate;`
-
-
+# Env files stuff
 Add .env file with this settings:
-    JWT_SECRET='Ankur Thakur'
+    JWT_SECRET='Some Secret'
     IS_DEV=true
     DATABASE_HOST='localhost'
     DATABASE_PORT=3306
