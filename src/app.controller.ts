@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Request, Res, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Request,
+  Res,
+  // Sse,
+  UseGuards,
+  // MessageEvent,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { AppService } from './app.service';
 import { AuthService } from './auth/auth.service';
@@ -6,6 +15,7 @@ import { Public, SESSION_COOKIE_NAME } from './auth/constant';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 import { CookieOptions, Response } from 'express';
+// import { interval, map, Observable } from 'rxjs';
 
 @Controller()
 export class AppController {
@@ -41,4 +51,9 @@ export class AppController {
   getProfile(@Request() req) {
     return req.user;
   }
+
+  // @Sse('sse')
+  // sse(): Observable<MessageEvent> {
+  //   return interval(1000).pipe(map((_) => ({ data: { hello: 'world' } })));
+  // }
 }
