@@ -1,4 +1,18 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "projects": {
+    "alt-testlib": {
+      "type": "library",
+      "root": "libs/alt-testlib",
+      "entryFile": "index",
+      "sourceRoot": "libs/alt-testlib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/alt-testlib/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
 }

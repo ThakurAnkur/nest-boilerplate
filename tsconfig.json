@@ -16,6 +16,14 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/alt-testlib": [
+        "libs/alt-testlib/src"
+      ],
+      "@app/alt-testlib/*": [
+        "libs/alt-testlib/src/*"
+      ]
+    }
   }
 }
