@@ -1,13 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { UserModule } from './user/user.module';
 import configuration from './config/configuration';
-import { User } from './user/entities/user.entity';
-import { AuthModule } from './auth/auth.module';
 import { AltTestlibModule } from '@app/alt-testlib';
+import { AltAuthModule } from '@alt/alt-auth';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -21,16 +17,15 @@ import { AltTestlibModule } from '@app/alt-testlib';
       port: Number(process.env.DATABASE_PORT),
       username: process.env.DATABASE_USER,
       database: 'boilerplate',
-      entities: [User],
       autoLoadEntities: true,
       synchronize: true,
       debug: false,
     }),
-    UserModule,
-    AuthModule,
+    // UserModule,
+    // AuthModule,
     AltTestlibModule,
+    AltAuthModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}

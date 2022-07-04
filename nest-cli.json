@@ -10,6 +10,24 @@
       "compilerOptions": {
         "tsConfigPath": "libs/alt-testlib/tsconfig.lib.json"
       }
+    },
+    "alt-auth": {
+      "type": "library",
+      "root": "libs/alt-auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/alt-auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/alt-auth/tsconfig.lib.json"
+      }
+    },
+    "alt-user": {
+      "type": "library",
+      "root": "libs/alt-user",
+      "entryFile": "index",
+      "sourceRoot": "libs/alt-user/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/alt-user/tsconfig.lib.json"
+      }
     }
   },
   "compilerOptions": {

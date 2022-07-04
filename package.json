@@ -87,7 +87,9 @@
       "<rootDir>/libs/"
     ],
     "moduleNameMapper": {
-      "^@app/alt-testlib(|/.*)$": "<rootDir>/libs/alt-testlib/src/$1"
+      "^@app/alt-testlib(|/.*)$": "<rootDir>/libs/alt-testlib/src/$1",
+      "^alt/alt-auth(|/.*)$": "<rootDir>/libs/alt-auth/src/$1",
+      "^@alt/alt-user(|/.*)$": "<rootDir>/libs/alt-user/src/$1"
     }
   }
 }

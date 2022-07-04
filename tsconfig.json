@@ -23,6 +23,18 @@
       ],
       "@app/alt-testlib/*": [
         "libs/alt-testlib/src/*"
+      ],
+      "@alt/alt-auth": [
+        "libs/alt-auth/src"
+      ],
+      "@alt/alt-auth/*": [
+        "libs/alt-auth/src/*"
+      ],
+      "@alt/alt-user": [
+        "libs/alt-user/src"
+      ],
+      "@alt/alt-user/*": [
+        "libs/alt-user/src/*"
       ]
     }
   }
